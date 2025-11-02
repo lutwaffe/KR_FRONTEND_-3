@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="logo">Максим Милютин  </div>
+      <ul class="nav-list">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="projects.html">Проекты</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="accessibility.html" aria-current="page">Доступность</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+    <section class="section">
+      <h1 class="section-title">Товар</h1>
+      <p>Товар ниже</p>
+    </section>
+    <section class="section">
+      <h2>Пример модального окна</h2>
+      <article class="card">
+        <img src="images\6876439357.jpg" alt="Смартфон XYZ Model 2025, черный цвет, 6.7-дюймовый экран">
+        <h3>Новый смартфон H3H3</h3>
+        <p>Цена: <strong style="color:#dc3545;">42 000 ₽</strong> <span class="visually-hidden">Акционная цена</span></p>
+        <button class="button" id="openModalBtn" aria-label="Добавить смартфон XYZ в корзину">Добавить в корзину</button>
+      </article>
+      <div class="overlay" id="overlay" hidden></div>
+      <div class="modal" id="modal" role="dialog" aria-modal="true"
+           aria-labelledby="modalTitle" aria-describedby="modalDesc" tabindex="-1" hidden>
+        <h2 id="modalTitle">Товар добавлен в корзину</h2>
+        <p id="modalDesc">черный Rols roys успешно добавлен в корзину покупок.</p>
+        <button class="close-btn" id="closeModalBtn" aria-label="Закрыть уведомление">✕ <span class="visually-hidden">Закрыть</span></button>
+      </div>
+      <div id="liveStatus" role="status" aria-live="polite" aria-atomic="true" class="success" hidden>
+        Товар добавлен!
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Мой крутой гит <a href="https://github.com/lutwaffe" target="_blank">https://github.com/lutwaffe</a></p>
+  </footer>
+
+ <script src="./scripts/main.js"></script>
+</body>
+</html>
